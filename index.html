@@ -1,62 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Aro. — Cycle-Aware Wellbeing</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>Aro. — Cycle-Aware Wellbeing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-      background: #faf7f9;
-      color: #1f1f1f;
-    }
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 60px 20px;
-    }
+<style>
+:root {
+  --movement:#F2A77C;
+  --fuel:#9FB26B;
+  --rhythm:#C75B7A;
+  --bg:#faf7f9;
+  --text:#2b2b2b;
+}
 
-    h1 {
-      font-size: 3.2rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-    }
+* { box-sizing:border-box; }
 
-    p {
-      font-size: 1.25rem;
-      max-width: 600px;
-      line-height: 1.6;
-      opacity: 0.8;
-    }
+body {
+  margin:0;
+  font-family:"DM Sans", system-ui;
+  background:var(--bg);
+  color:var(--text);
+}
 
-    .cta {
-      margin-top: 40px;
-      padding: 14px 32px;
-      border-radius: 999px;
-      background: #c75b7a;
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-  </style>
+h1,h2,h3 {
+  font-family:"DM Serif Display", serif;
+  letter-spacing:-0.02em;
+}
+
+section {
+  padding:120px 8%;
+}
+
+.hero {
+  text-align:center;
+  background:linear-gradient(120deg, rgba(242,167,124,.15), rgba(159,178,107,.15), rgba(199,91,122,.15));
+}
+
+.hero h1 {
+  font-size:4rem;
+  margin-bottom:20px;
+}
+
+.hero p {
+  max-width:700px;
+  margin:0 auto;
+  font-size:1.25rem;
+  opacity:.8;
+}
+
+.button {
+  display:inline-block;
+  margin-top:40px;
+  padding:14px 36px;
+  border-radius:999px;
+  background:var(--rhythm);
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.pillars {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+  margin-top:80px;
+}
+
+.pillar {
+  border-radius:32px;
+  padding:50px 40px;
+  color:#2b2b2b;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.pillar:hover { transform:translateY(-6px); }
+
+.movement { background:rgba(242,167,124,.25); }
+.fuel { background:rgba(159,178,107,.25); }
+.rhythm { background:rgba(199,91,122,.25); }
+
+.pillar h3 { margin-top:0; }
+
+.app {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.app img {
+  width:100%;
+  max-width:360px;
+}
+
+.community {
+  background:rgba(199,91,122,.12);
+  text-align:center;
+}
+
+.waitlist {
+  background:linear-gradient(120deg, rgba(242,167,124,.2), rgba(159,178,107,.2), rgba(199,91,122,.2));
+  text-align:center;
+}
+
+input {
+  width:100%;
+  max-width:420px;
+  padding:16px 20px;
+  margin:12px 0;
+  border-radius:999px;
+  border:none;
+  font-size:1rem;
+}
+
+@media(max-width:900px){
+  .app { grid-template-columns:1fr; text-align:center; }
+}
+</style>
 </head>
+
 <body>
-  <section class="hero">
-    <h1>Aro.</h1>
-    <p>
-      A cycle-aware wellbeing platform for movement, fuel and rhythm.
-    </p>
-    <a class="cta" href="#">
-      Join the waitlist
+
+<section class="hero">
+  <h1>Aro.</h1>
+  <p>Finally understand your body. A cycle-aware wellbeing platform connecting movement, fuel, and rhythm.</p>
+  <a class="button" href="#waitlist">Join the waitlist</a>
+</section>
+
+<section>
+  <h2>The complete picture</h2>
+
+  <div class="pillars">
+    <a class="pillar movement" href="#">
+      <h3>Movement</h3>
+      <p>Train in sync with your cycle. Track runs, strength, Pilates and see what works best in every phase.</p>
     </a>
-  </section>
+
+    <a class="pillar fuel" href="#">
+      <h3>Fuel</h3>
+      <p>Log meals, hydration and supplements to understand how nutrition affects energy, skin and mood.</p>
+    </a>
+
+    <a class="pillar rhythm" href="#">
+      <h3>Rhythm</h3>
+      <p>Track your cycle, emotions and symptoms and see how everything connects.</p>
+    </a>
+  </div>
+</section>
+
+<section class="app">
+  <img src="https://i.imgur.com/8Z8aK5Q.png">
+  <div>
+    <h2>Your wellbeing companion, in your pocket</h2>
+    <p>Aro helps you track on-the-go, uncover insights, and stay aligned with your body.</p>
+    <strong>Coming soon.</strong>
+  </div>
+</section>
+
+<section class="community">
+  <h2>Join the aro. community</h2>
+  <p>Follow @aro.journal for daily tips, inspiration, and behind-the-scenes.</p>
+  <a class="button" href="https://instagram.com/aro.journal">Follow on Instagram</a>
+</section>
+
+<section class="waitlist" id="waitlist">
+  <h2>Join the waitlist</h2>
+  <p>Limited early access spots available.</p>
+
+  <input placeholder="Enter your email">
+  <input placeholder="Instagram handle">
+
+  <br>
+  <a class="button" href="#">Join the waitlist</a>
+</section>
+
 </body>
 </html>
