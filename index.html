@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aro. – Cycle-Aware Wellbeing</title>
+  <title>Aro. — Cycle-Aware Wellbeing</title>
 
   <style>
     :root {
@@ -48,6 +48,11 @@
       opacity: 0.8;
     }
 
+    .nav-logo {
+      height: 28px;
+      display: block;
+    }
+
     .nav-cta {
       background: var(--accent);
       color: #fff;
@@ -60,7 +65,7 @@
     /* ---------- HERO ---------- */
 
     .hero {
-      min-height: calc(100vh - 96px); /* accounts for header */
+      min-height: calc(100vh - 96px); /* header height offset */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -76,13 +81,12 @@
     }
 
     .hero-logo {
-      font-size: 64px;
-      font-weight: 600;
-      letter-spacing: -0.02em;
+      height: 80px;
+      display: block;
     }
 
     .hero-text {
-      max-width: 620px;
+      max-width: 640px;
       font-size: 20px;
       line-height: 1.5;
       opacity: 0.85;
@@ -112,6 +116,10 @@
         min-height: 75vh;
       }
 
+      .hero-logo {
+        height: 68px;
+      }
+
       .hero-text {
         font-size: 18px;
         padding: 0 16px;
@@ -124,15 +132,15 @@
 
   <!-- NAV -->
   <header>
-    <img 
-  src="assets/aro-logo.svg" 
-  alt="Aro logo" 
-  class="nav-logo"
-/>
+    <img
+      src="aro-logo.svg"
+      alt="Aro logo"
+      class="nav-logo"
+    />
 
     <nav>
       <a href="#">Product</a>
-      <a href="#">Movement</a>
+      <a href="movement.html">Movement</a>
       <a href="#">Fuel</a>
       <a href="#">Rhythm</a>
       <a href="#">Subscriptions</a>
@@ -145,7 +153,11 @@
   <section class="hero">
     <div class="hero-content">
 
-      <div class="hero-logo">ar<span style="color:#c75b7a;">o</span></div>
+      <img
+        src="aro-logo.svg"
+        alt="Aro logo"
+        class="hero-logo"
+      />
 
       <p class="hero-text">
         Finally understand your body. A cycle-aware wellbeing platform connecting movement, fuel, and rhythm.
