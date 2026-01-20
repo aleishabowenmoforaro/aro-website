@@ -9,8 +9,10 @@
     :root {
       --bg-start: #f6efe8;
       --bg-end: #f3f0e9;
+      --section-bg: #ffffff;
       --text-main: #3f3f3f;
       --accent: #c75b7a;
+      --muted: #6b6b6b;
     }
 
     * {
@@ -35,13 +37,10 @@
       align-items: center;
     }
 
-    /* Left swirl */
     .nav-logo {
       height: 128px;
-      display: block;
     }
 
-    /* Centre nav */
     .nav-center {
       display: flex;
       justify-content: center;
@@ -49,7 +48,6 @@
 
     nav {
       display: flex;
-      align-items: center;
       gap: 28px;
       font-size: 14px;
     }
@@ -60,7 +58,6 @@
       opacity: 0.85;
     }
 
-    /* Right CTA */
     .nav-cta {
       background: var(--accent);
       color: #fff;
@@ -68,7 +65,6 @@
       border-radius: 999px;
       font-size: 14px;
       text-decoration: none;
-      white-space: nowrap;
     }
 
     /* ---------- HERO ---------- */
@@ -78,6 +74,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
     }
 
     .hero-content {
@@ -86,105 +83,12 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      text-align: center;
     }
 
     .hero-logo {
       height: 432px;
-      display: block;
     }
 
     .hero-text {
       max-width: 640px;
-      font-size: 20px;
-      line-height: 1.5;
-      opacity: 0.85;
-    }
-
-    .hero-cta {
-      background: var(--accent);
-      color: #fff;
-      padding: 16px 32px;
-      border-radius: 999px;
-      font-size: 16px;
-      text-decoration: none;
-    }
-
-    /* ---------- RESPONSIVE ---------- */
-
-    @media (max-width: 768px) {
-      header {
-        padding: 20px 24px;
-        grid-template-columns: auto auto;
-      }
-
-      .nav-center {
-        display: none;
-      }
-
-      .nav-logo {
-        height: 96px;
-      }
-
-      .hero {
-        min-height: calc(100vh - 120px);
-      }
-
-      .hero-content {
-        min-height: 85vh;
-      }
-
-      .hero-logo {
-        height: 300px;
-      }
-
-      .hero-text {
-        font-size: 18px;
-        padding: 0 16px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- NAV -->
-  <header>
-    <!-- Left: Swirl -->
-    <img
-      src="aroswirl.svg"
-      alt="Aro swirl logo"
-      class="nav-logo"
-    />
-
-    <!-- Centre: Tabs -->
-    <div class="nav-center">
-      <nav>
-        <a href="#">Product</a>
-        <a href="movement.html">Movement</a>
-        <a href="#">Fuel</a>
-        <a href="#">Rhythm</a>
-        <a href="#">Subscriptions</a>
-        <a href="#">Founder’s story</a>
-      </nav>
-    </div>
-
-    <!-- Right: CTA -->
-    <a href="#waitlist" class="nav-cta">Join waitlist</a>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-
-      <img
-        src="aro-logo.svg"
-        alt="Aro logo"
-        class="hero-logo"
-      />
-
-      <p class="hero-text">
-        Finally understand your body. A cycle-aware wellbeing platform connecting movement, fuel, and rhythm.
-      </p>
-
-      <a href="#waitlist" class
+      font-size: 20px
