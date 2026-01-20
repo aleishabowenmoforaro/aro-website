@@ -37,7 +37,7 @@
       font-weight: 400;
     }
 
-    /* Header */
+    /* ---------- Header (MATCHES HOME PAGE) ---------- */
     header {
       max-width: 1200px;
       margin: 0 auto;
@@ -76,14 +76,13 @@
       font-size: 14px;
     }
 
-    /* Page container */
-    .page {
+    /* ---------- Page ---------- */
+    main {
       max-width: 900px;
       margin: 0 auto;
       padding: 80px 32px 120px;
     }
 
-    /* Pill */
     .pill {
       display: inline-block;
       padding: 6px 14px;
@@ -93,7 +92,6 @@
       margin-bottom: 24px;
     }
 
-    /* Hero text */
     .hero h1 {
       font-size: 48px;
       margin-bottom: 20px;
@@ -104,19 +102,20 @@
       line-height: 1.7;
       color: var(--text-muted);
       max-width: 720px;
+      margin-bottom: 16px;
     }
 
-    /* Section */
-    .section {
+    /* ---------- Section ---------- */
+    section {
       margin-top: 72px;
     }
 
-    .section h2 {
+    section h2 {
       font-size: 32px;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
-    /* Cards */
+    /* ---------- Cards ---------- */
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -124,9 +123,15 @@
       margin-bottom: 40px;
     }
 
+    .card {
+      background: rgba(242, 167, 124, 0.08);
+      border-radius: 20px;
+      padding: 28px;
+    }
+
     .card h3 {
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .card p {
@@ -135,7 +140,6 @@
       color: var(--text-muted);
     }
 
-    /* Secondary paragraph */
     .secondary-copy {
       font-size: 17px;
       line-height: 1.7;
@@ -143,7 +147,7 @@
       max-width: 720px;
     }
 
-    /* Responsive */
+    /* ---------- Responsive ---------- */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 38px;
@@ -162,21 +166,23 @@
   <header>
     <div class="nav-left">
       <a href="index.html">
-        <img src="aroswirl.svg" alt="Aro logo" />
+        <img src="aroswirl.svg" alt="Aro logo">
       </a>
     </div>
 
     <nav>
+      <a href="index.html">Product</a>
       <a href="movement.html">Movement</a>
       <a href="fuel.html">Fuel</a>
       <a href="rhythm.html">Rhythm</a>
       <a href="#">Subscriptions</a>
+      <a href="#">Founder’s story</a>
       <a class="waitlist-btn" href="index.html#waitlist">Join waitlist</a>
     </nav>
   </header>
 
-  <!-- Page content -->
-  <main class="page">
+  <!-- Content -->
+  <main>
 
     <section class="hero">
       <span class="pill">Movement</span>
@@ -188,30 +194,36 @@
         and your movement experience changes with it.
       </p>
 
-      <p style="margin-top: 16px;">
+      <p>
         Rather than following rigid plans, Aro helps you notice how strength, endurance,
         motivation, and recovery naturally shift across your cycle, supporting a more intuitive
         relationship with movement.
       </p>
     </section>
 
-    <section class="section">
+    <section>
       <h2>What you can track</h2>
 
       <div class="cards">
         <div class="card">
           <h3>Training & workouts</h3>
-          <p>Log runs, strength sessions, Pilates, yoga, and HIIT in a way that reflects how your body feels.</p>
+          <p>
+            Log runs, strength sessions, Pilates, yoga, and HIIT in a way that reflects how your body feels.
+          </p>
         </div>
 
         <div class="card">
           <h3>Energy & performance</h3>
-          <p>Notice how performance and motivation shift across different days and phases of your cycle.</p>
+          <p>
+            Notice how performance and motivation shift across different days and phases of your cycle.
+          </p>
         </div>
 
         <div class="card">
           <h3>Recovery & rest</h3>
-          <p>Track rest, lighter movement, and recovery without pressure, guilt, or rigid targets.</p>
+          <p>
+            Track rest, lighter movement, and recovery without pressure, guilt, or rigid targets.
+          </p>
         </div>
       </div>
 
