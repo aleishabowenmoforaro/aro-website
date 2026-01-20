@@ -69,3 +69,216 @@
     }
 
     /* ---------- HERO ---------- */
+
+    .hero {
+      min-height: calc(100vh - 160px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-content {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero-logo {
+      height: 432px;
+    }
+
+    .hero-text {
+      max-width: 640px;
+      font-size: 20px;
+      line-height: 1.5;
+      opacity: 0.85;
+    }
+
+    .hero-cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 999px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    /* ---------- CONTENT SECTIONS ---------- */
+
+    section.content {
+      background: var(--white);
+      padding: 120px 24px;
+      text-align: center;
+    }
+
+    .content-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .content h2 {
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      margin-top: 72px;
+    }
+
+    .pillar h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .pillar p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+
+    /* ---------- WAITLIST ---------- */
+
+    .waitlist-form {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .waitlist-form input {
+      padding: 14px 18px;
+      border-radius: 999px;
+      border: 1px solid #ddd;
+      min-width: 260px;
+      font-size: 14px;
+    }
+
+    .waitlist-form button {
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 24px;
+        grid-template-columns: auto auto;
+      }
+
+      .nav-center {
+        display: none;
+      }
+
+      .nav-logo {
+        height: 96px;
+      }
+
+      .hero-logo {
+        height: 300px;
+      }
+
+      .pillars {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="aroswirl.svg" alt="Aro swirl" class="nav-logo" />
+
+    <div class="nav-center">
+      <nav>
+        <a href="#product">Product</a>
+        <a href="#movement">Movement</a>
+        <a href="#fuel">Fuel</a>
+        <a href="#rhythm">Rhythm</a>
+        <a href="#subscriptions">Subscriptions</a>
+        <a href="#founder">Founder’s story</a>
+      </nav>
+    </div>
+
+    <a href="#waitlist" class="nav-cta">Join waitlist</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="product">
+    <div class="hero-content">
+      <img src="aro-logo.svg" alt="Aro logo" class="hero-logo" />
+      <p class="hero-text">
+        Finally understand your body. A cycle-aware wellbeing platform connecting movement, fuel, and rhythm.
+      </p>
+      <a href="#waitlist" class="hero-cta">Join the waitlist</a>
+    </div>
+  </section>
+
+  <!-- APP EXPLAINED -->
+  <section class="content">
+    <div class="content-inner">
+      <h2>The Aro approach</h2>
+      <p>
+        Aro brings together your movement, nutrition, and menstrual rhythm into one calm, intuitive platform —
+        helping you train, fuel, and live in sync with your body.
+      </p>
+
+      <div class="pillars">
+        <div class="pillar" id="movement">
+          <h3>Movement</h3>
+          <p>Log workouts, runs, recovery, and training sessions — adapted to your cycle.</p>
+        </div>
+
+        <div class="pillar" id="fuel">
+          <h3>Fuel</h3>
+          <p>Track meals, nourishment, and energy intake with cycle-aware guidance.</p>
+        </div>
+
+        <div class="pillar" id="rhythm">
+          <h3>Rhythm</h3>
+          <p>Understand your cycle, mood, and energy patterns to plan life more intuitively.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section class="content" id="waitlist">
+    <div class="content-inner">
+      <h2>Join the waitlist</h2>
+      <p>
+        Be the first to access Aro when we enter beta. Early members will help shape the platform
+        and receive priority access at launch.
+      </p>
+
+      <form class="waitlist-form">
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit">Join waitlist</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
