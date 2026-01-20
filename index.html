@@ -30,9 +30,21 @@
     header {
       width: 100%;
       padding: 28px 48px;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
+    }
+
+    /* Left swirl */
+    .nav-logo {
+      height: 128px;
+      display: block;
+    }
+
+    /* Centre nav */
+    .nav-center {
+      display: flex;
+      justify-content: center;
     }
 
     nav {
@@ -45,15 +57,10 @@
     nav a {
       text-decoration: none;
       color: var(--text-main);
-      opacity: 0.8;
+      opacity: 0.85;
     }
 
-    /* 🔑 NAV LOGO — SWIRL ONLY (DOUBLED) */
-    .nav-logo {
-      height: 128px; /* was 64px */
-      display: block;
-    }
-
+    /* Right CTA */
     .nav-cta {
       background: var(--accent);
       color: #fff;
@@ -61,12 +68,13 @@
       border-radius: 999px;
       font-size: 14px;
       text-decoration: none;
+      white-space: nowrap;
     }
 
     /* ---------- HERO ---------- */
 
     .hero {
-      min-height: calc(100vh - 160px); /* accounts for larger nav */
+      min-height: calc(100vh - 160px);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -81,7 +89,6 @@
       text-align: center;
     }
 
-    /* HERO LOGO — FULL WORDMARK */
     .hero-logo {
       height: 432px;
       display: block;
@@ -108,14 +115,15 @@
     @media (max-width: 768px) {
       header {
         padding: 20px 24px;
+        grid-template-columns: auto auto;
       }
 
-      nav {
+      .nav-center {
         display: none;
       }
 
       .nav-logo {
-        height: 96px; /* proportional mobile size */
+        height: 96px;
       }
 
       .hero {
@@ -142,21 +150,27 @@
 
   <!-- NAV -->
   <header>
+    <!-- Left: Swirl -->
     <img
       src="aroswirl.svg"
       alt="Aro swirl logo"
       class="nav-logo"
     />
 
-    <nav>
-      <a href="#">Product</a>
-      <a href="movement.html">Movement</a>
-      <a href="#">Fuel</a>
-      <a href="#">Rhythm</a>
-      <a href="#">Subscriptions</a>
-      <a href="#">Founder’s story</a>
-      <a href="#waitlist" class="nav-cta">Join waitlist</a>
-    </nav>
+    <!-- Centre: Tabs -->
+    <div class="nav-center">
+      <nav>
+        <a href="#">Product</a>
+        <a href="movement.html">Movement</a>
+        <a href="#">Fuel</a>
+        <a href="#">Rhythm</a>
+        <a href="#">Subscriptions</a>
+        <a href="#">Founder’s story</a>
+      </nav>
+    </div>
+
+    <!-- Right: CTA -->
+    <a href="#waitlist" class="nav-cta">Join waitlist</a>
   </header>
 
   <!-- HERO -->
@@ -173,12 +187,4 @@
         Finally understand your body. A cycle-aware wellbeing platform connecting movement, fuel, and rhythm.
       </p>
 
-      <a href="#waitlist" class="hero-cta">
-        Join the waitlist
-      </a>
-
-    </div>
-  </section>
-
-</body>
-</html>
+      <a href="#waitlist" class
