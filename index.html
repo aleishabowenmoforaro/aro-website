@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aro. — Cycle-Aware Wellbeing</title>
 
+  <!-- DM Serif Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg-start: #f6efe8;
@@ -22,12 +27,17 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'DM Sans', system-ui, sans-serif;
       color: var(--text-main);
       background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
     }
 
-    /* ---------- HEADER / NAV ---------- */
+    h1, h2, h3 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+    }
+
+    /* ---------- NAV ---------- */
 
     header {
       width: 100%;
@@ -65,7 +75,6 @@
       border-radius: 999px;
       font-size: 14px;
       text-decoration: none;
-      white-space: nowrap;
     }
 
     /* ---------- HERO ---------- */
@@ -93,8 +102,8 @@
     .hero-text {
       max-width: 640px;
       font-size: 20px;
-      line-height: 1.5;
-      opacity: 0.85;
+      line-height: 1.6;
+      color: var(--text-muted);
     }
 
     .hero-cta {
@@ -116,19 +125,6 @@
 
     .content-inner {
       max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .content h2 {
-      font-size: 36px;
-      margin-bottom: 24px;
-    }
-
-    .content p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--text-muted);
-      max-width: 720px;
       margin: 0 auto;
     }
 
@@ -178,8 +174,6 @@
       cursor: pointer;
     }
 
-    /* ---------- RESPONSIVE ---------- */
-
     @media (max-width: 768px) {
       header {
         padding: 20px 24px;
@@ -207,78 +201,69 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="aroswirl.svg" alt="Aro swirl" class="nav-logo" />
+<header>
+  <img src="aroswirl.svg" class="nav-logo" alt="Aro swirl" />
 
-    <div class="nav-center">
-      <nav>
-        <a href="index.html">Product</a>
-        <a href="movement.html">Movement</a>
-        <a href="fuel.html">Fuel</a>
-        <a href="rhythm.html">Rhythm</a>
-        <a href="#">Subscriptions</a>
-        <a href="#">Founder’s story</a>
-      </nav>
-    </div>
+  <div class="nav-center">
+    <nav>
+      <a href="index.html">Product</a>
+      <a href="movement.html">Movement</a>
+      <a href="fuel.html">Fuel</a>
+      <a href="rhythm.html">Rhythm</a>
+      <a href="#">Subscriptions</a>
+      <a href="#">Founder’s story</a>
+    </nav>
+  </div>
 
-    <a href="index.html#waitlist" class="nav-cta">Join waitlist</a>
-  </header>
+  <a href="#waitlist" class="nav-cta">Join waitlist</a>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="aro-logo.svg" alt="Aro logo" class="hero-logo" />
-      <p class="hero-text">
-        Finally understand your body. A cycle-aware wellbeing platform connecting movement, fuel, and rhythm.
-      </p>
-      <a href="#waitlist" class="hero-cta">Join the waitlist</a>
-    </div>
-  </section>
+<section class="hero">
+  <div class="hero-content">
+    <img src="aro-logo.svg" class="hero-logo" alt="Aro logo" />
+    <p class="hero-text">
+      Finally understand your body. A cycle-aware wellbeing platform connecting movement, fuel, and rhythm.
+    </p>
+    <a href="#waitlist" class="hero-cta">Join the waitlist</a>
+  </div>
+</section>
 
-  <!-- APP EXPLAINED -->
-  <section class="content">
-    <div class="content-inner">
-      <h2>The Aro approach</h2>
-      <p>
-        Aro brings together your movement, nutrition, and menstrual rhythm into one calm, intuitive platform —
-        helping you train, fuel, and live in sync with your body.
-      </p>
+<section class="content">
+  <div class="content-inner">
+    <h2>The Aro approach</h2>
+    <p>
+      Aro brings together your movement, nutrition, and menstrual rhythm into one calm, intuitive platform —
+      helping you train, fuel, and live in sync with your body.
+    </p>
 
-      <div class="pillars">
-        <div class="pillar">
-          <h3>Movement</h3>
-          <p>Log workouts, runs, recovery, and training sessions — adapted to your cycle.</p>
-        </div>
-
-        <div class="pillar">
-          <h3>Fuel</h3>
-          <p>Track meals, nourishment, and energy intake with cycle-aware guidance.</p>
-        </div>
-
-        <div class="pillar">
-          <h3>Rhythm</h3>
-          <p>Understand your cycle, mood, and energy patterns to plan life more intuitively.</p>
-        </div>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Movement</h3>
+        <p>Train and recover with cycle-aware guidance.</p>
+      </div>
+      <div class="pillar">
+        <h3>Fuel</h3>
+        <p>Nourish your body in line with energy and hormones.</p>
+      </div>
+      <div class="pillar">
+        <h3>Rhythm</h3>
+        <p>Understand patterns in mood, focus, and wellbeing.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- WAITLIST -->
-  <section class="content" id="waitlist">
-    <div class="content-inner">
-      <h2>Join the waitlist</h2>
-      <p>
-        Be the first to access Aro when we enter beta. Early members will help shape the platform
-        and receive priority access at launch.
-      </p>
+<section class="content" id="waitlist">
+  <div class="content-inner">
+    <h2>Join the waitlist</h2>
+    <p>Be the first to access Aro when we enter beta.</p>
 
-      <form class="waitlist-form">
-        <input type="email" placeholder="Your email address" required />
-        <button type="submit">Join waitlist</button>
-      </form>
-    </div>
-  </section>
+    <form class="waitlist-form">
+      <input type="email" placeholder="Your email address" required />
+      <button type="submit">Join waitlist</button>
+    </form>
+  </div>
+</section>
 
 </body>
 </html>
