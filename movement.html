@@ -37,7 +37,7 @@
       font-weight: 400;
     }
 
-    /* ---------- Header (MATCHES HOME PAGE) ---------- */
+    /* ---------- Header (IDENTICAL BEHAVIOUR TO INDEX) ---------- */
     header {
       max-width: 1200px;
       margin: 0 auto;
@@ -45,6 +45,17 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      height: 56px;
+    }
+
+    .nav-left img {
+      max-height: 100%;
+      width: auto;
     }
 
     nav {
@@ -101,7 +112,6 @@
       margin-bottom: 16px;
     }
 
-    /* ---------- Section ---------- */
     section {
       margin-top: 72px;
     }
@@ -143,7 +153,6 @@
       max-width: 720px;
     }
 
-    /* ---------- Responsive ---------- */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 38px;
