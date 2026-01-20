@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Movement — Aro</title>
 
-  <!-- Fonts -->
+  <!-- DM Serif Display + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-start: #fbf6f0;
-      --bg-end: #f5efe7;
-      --text-main: #2f2f2f;
-      --text-muted: #6f6f6f;
+      --bg-start: #f6efe8;
+      --bg-end: #f3f0e9;
+      --text-main: #3f3f3f;
+      --text-muted: #6b6b6b;
       --pill-bg: #f2e3d3;
+      --accent: #c75b7a;
       --movement-accent: #f2a77c;
     }
 
@@ -27,7 +28,7 @@
     }
 
     body {
-      font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'DM Sans', system-ui, sans-serif;
       color: var(--text-main);
       background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
     }
@@ -37,57 +38,52 @@
       font-weight: 400;
     }
 
-    /* ---------- Header (IDENTICAL BEHAVIOUR TO INDEX) ---------- */
+    /* ---------- NAV (IDENTICAL TO INDEX) ---------- */
+
     header {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 28px 32px;
-      display: flex;
+      width: 100%;
+      padding: 28px 48px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
-      justify-content: space-between;
     }
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      height: 56px;
+    .nav-logo {
+      height: 128px;
     }
 
-    .nav-left img {
-      max-height: 100%;
-      width: auto;
+    .nav-center {
+      display: flex;
+      justify-content: center;
     }
 
     nav {
       display: flex;
-      gap: 32px;
-      align-items: center;
+      gap: 28px;
+      font-size: 14px;
     }
 
     nav a {
       text-decoration: none;
-      color: var(--text-muted);
-      font-size: 15px;
-    }
-
-    nav a:hover {
       color: var(--text-main);
+      opacity: 0.85;
     }
 
-    .waitlist-btn {
-      padding: 10px 18px;
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 22px;
       border-radius: 999px;
-      background: #c75b7a;
-      color: white;
-      text-decoration: none;
       font-size: 14px;
+      text-decoration: none;
     }
 
-    /* ---------- Page ---------- */
+    /* ---------- PAGE CONTENT ---------- */
+
     main {
       max-width: 900px;
       margin: 0 auto;
-      padding: 80px 32px 120px;
+      padding: 120px 32px 140px;
     }
 
     .pill {
@@ -121,7 +117,8 @@
       margin-bottom: 32px;
     }
 
-    /* ---------- Cards ---------- */
+    /* ---------- CARDS ---------- */
+
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -130,7 +127,7 @@
     }
 
     .card {
-      background: rgba(242, 167, 124, 0.08);
+      background: rgba(242, 167, 124, 0.12);
       border-radius: 20px;
       padding: 28px;
     }
@@ -154,12 +151,25 @@
     }
 
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 38px;
+      header {
+        padding: 20px 24px;
+        grid-template-columns: auto auto;
+      }
+
+      .nav-center {
+        display: none;
+      }
+
+      .nav-logo {
+        height: 96px;
       }
 
       .cards {
         grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
       }
     }
   </style>
@@ -167,14 +177,10 @@
 
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="nav-left">
-      <a href="index.html">
-        <img src="aroswirl.svg" alt="Aro logo">
-      </a>
-    </div>
+<header>
+  <img src="aroswirl.svg" class="nav-logo" alt="Aro swirl" />
 
+  <div class="nav-center">
     <nav>
       <a href="index.html">Product</a>
       <a href="movement.html">Movement</a>
@@ -182,63 +188,64 @@
       <a href="rhythm.html">Rhythm</a>
       <a href="#">Subscriptions</a>
       <a href="#">Founder’s story</a>
-      <a class="waitlist-btn" href="index.html#waitlist">Join waitlist</a>
     </nav>
-  </header>
+  </div>
 
-  <!-- Content -->
-  <main>
+  <a href="index.html#waitlist" class="nav-cta">Join waitlist</a>
+</header>
 
-    <section class="hero">
-      <span class="pill">Movement</span>
+<main>
 
-      <h1>Train with your cycle, not against it</h1>
+  <section class="hero">
+    <span class="pill">Movement</span>
 
-      <p>
-        Movement in Aro is built around one simple idea, your body changes throughout the month,
-        and your movement experience changes with it.
-      </p>
+    <h1>Train with your cycle, not against it</h1>
 
-      <p>
-        Rather than following rigid plans, Aro helps you notice how strength, endurance,
-        motivation, and recovery naturally shift across your cycle, supporting a more intuitive
-        relationship with movement.
-      </p>
-    </section>
+    <p>
+      Movement in Aro is built around one simple idea, your body changes throughout the month,
+      and your movement experience changes with it.
+    </p>
 
-    <section>
-      <h2>What you can track</h2>
+    <p>
+      Rather than following rigid plans, Aro helps you notice how strength, endurance,
+      motivation, and recovery naturally shift across your cycle, supporting a more intuitive
+      relationship with movement.
+    </p>
+  </section>
 
-      <div class="cards">
-        <div class="card">
-          <h3>Training & workouts</h3>
-          <p>
-            Log runs, strength sessions, Pilates, yoga, and HIIT in a way that reflects how your body feels.
-          </p>
-        </div>
+  <section>
+    <h2>What you can track</h2>
 
-        <div class="card">
-          <h3>Energy & performance</h3>
-          <p>
-            Notice how performance and motivation shift across different days and phases of your cycle.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Recovery & rest</h3>
-          <p>
-            Track rest, lighter movement, and recovery without pressure, guilt, or rigid targets.
-          </p>
-        </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Training & workouts</h3>
+        <p>
+          Log runs, strength sessions, Pilates, yoga, and HIIT in a way that reflects how your body feels.
+        </p>
       </div>
 
-      <p class="secondary-copy">
-        Instead of instructions, Aro offers subtle cues and reflections, helping you decide when to push,
-        when to slow down, and when rest might be what your body needs most.
-      </p>
-    </section>
+      <div class="card">
+        <h3>Energy & performance</h3>
+        <p>
+          Notice how performance and motivation shift across different days and phases of your cycle.
+        </p>
+      </div>
 
-  </main>
+      <div class="card">
+        <h3>Recovery & rest</h3>
+        <p>
+          Track rest, lighter movement, and recovery without pressure, guilt, or rigid targets.
+        </p>
+      </div>
+    </div>
+
+    <p class="secondary-copy">
+      Instead of instructions, Aro offers subtle cues and reflections, helping you decide when to push,
+      when to slow down, and when rest might be what your body needs most.
+    </p>
+  </section>
+
+</main>
 
 </body>
 </html>
