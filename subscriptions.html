@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscriptions — Aro</title>
+
+  <!-- DM Serif Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-start: #f6efe8;
+      --bg-end: #f3f0e9;
+      --text-main: #3f3f3f;
+      --text-muted: #6b6b6b;
+      --pill-bg: #efe3ea;
+      --accent: #c75b7a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--text-main);
+      background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
+    }
+
+    h1, h2, h3 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+    }
+
+    /* ---------- NAV (SITE-WIDE) ---------- */
+
+    header {
+      width: 100%;
+      padding: 28px 48px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+    }
+
+    .nav-logo {
+      height: 128px;
+    }
+
+    .nav-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      opacity: 0.85;
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    /* ---------- PAGE ---------- */
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 120px 32px 140px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin-bottom: 16px;
+    }
+
+    section {
+      margin-top: 72px;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+
+    /* ---------- CARDS ---------- */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: rgba(199, 91, 122, 0.14);
+      border-radius: 20px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 13px;
+      opacity: 0.75;
+    }
+
+    .secondary-copy {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 760px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 24px;
+        grid-template-columns: auto auto;
+      }
+
+      .nav-center {
+        display: none;
+      }
+
+      .nav-logo {
+        height: 96px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="aroswirl.svg" class="nav-logo" alt="Aro swirl" />
+
+  <div class="nav-center">
+    <nav>
+      <a href="index.html">Product</a>
+      <a href="movement.html">Movement</a>
+      <a href="fuel.html">Fuel</a>
+      <a href="rhythm.html">Rhythm</a>
+      <a href="subscriptions.html">Subscriptions</a>
+      <a href="#">Founder’s story</a>
+    </nav>
+  </div>
+
+  <a href="index.html#waitlist" class="nav-cta">Join waitlist</a>
+</header>
+
+<main>
+
+  <section class="hero">
+    <span class="pill">Subscriptions</span>
+
+    <h1>Choose how you use Aro</h1>
+
+    <p>
+      Aro is designed to grow with you — whether you’re exploring your own cycle,
+      building a business, or supporting others more thoughtfully.
+    </p>
+
+    <p>
+      All plans are built around awareness, reflection, and flexibility rather than
+      rigid systems or expectations.
+    </p>
+  </section>
+
+  <section>
+    <h2>Plans</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Aro. Personal</h3>
+        <div class="price">£6 / month</div>
+        <p>
+          Track movement, fuel, and rhythm in one calm space. Designed to help you
+          notice patterns, reflect, and make choices that feel more in tune with your body.
+        </p>
+        <span class="tag">Available at launch</span>
+      </div>
+
+      <div class="card">
+        <h3>Aro. Business</h3>
+        <div class="price">Coming soon</div>
+        <p>
+          Built for female solo founders and creatives who want to plan work, projects,
+          and energy around their cycle — without forcing productivity or burnout.
+        </p>
+        <span class="tag">Early access planned</span>
+      </div>
+
+      <div class="card">
+        <h3>Aro. Corporate</h3>
+        <div class="price">Coming soon</div>
+        <p>
+          A thoughtful, ethical way for organisations and HR teams to better understand
+          cycle-related fluctuations — centred on privacy, autonomy, and trust.
+        </p>
+        <span class="tag">Exploration phase</span>
+      </div>
+
+    </div>
+
+    <p class="secondary-copy">
+      Aro does not aim to optimise people — it aims to create space for better understanding.
+      Business and corporate plans are being developed carefully, with a strong focus on
+      consent, personal boundaries, and real-world application.
+    </p>
+  </section>
+
+</main>
+
+</body>
+</html>
