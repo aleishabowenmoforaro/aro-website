@@ -9,10 +9,10 @@
     :root {
       --bg-start: #f6efe8;
       --bg-end: #f3f0e9;
-      --section-bg: #ffffff;
+      --white: #ffffff;
       --text-main: #3f3f3f;
+      --text-muted: #6b6b6b;
       --accent: #c75b7a;
-      --muted: #6b6b6b;
     }
 
     * {
@@ -27,7 +27,7 @@
       background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
     }
 
-    /* ---------- NAV ---------- */
+    /* ---------- HEADER / NAV ---------- */
 
     header {
       width: 100%;
@@ -65,30 +65,7 @@
       border-radius: 999px;
       font-size: 14px;
       text-decoration: none;
+      white-space: nowrap;
     }
 
     /* ---------- HERO ---------- */
-
-    .hero {
-      min-height: calc(100vh - 160px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .hero-content {
-      min-height: 78vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .hero-logo {
-      height: 432px;
-    }
-
-    .hero-text {
-      max-width: 640px;
-      font-size: 20px
