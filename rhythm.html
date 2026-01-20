@@ -53,4 +53,201 @@
     }
 
     .nav-center {
+      display: flex;
+      justify-content: center;
+    }
 
+    nav {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      opacity: 0.85;
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    /* ---------- PAGE CONTENT ---------- */
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 32px 140px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin-bottom: 16px;
+    }
+
+    section {
+      margin-top: 72px;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+
+    /* ---------- CARDS ---------- */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: rgba(199, 91, 122, 0.16);
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .secondary-copy {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 720px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 24px;
+        grid-template-columns: auto auto;
+      }
+
+      .nav-center {
+        display: none;
+      }
+
+      .nav-logo {
+        height: 96px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="aroswirl.svg" class="nav-logo" alt="Aro swirl" />
+
+  <div class="nav-center">
+    <nav>
+      <a href="index.html">Product</a>
+      <a href="movement.html">Movement</a>
+      <a href="fuel.html">Fuel</a>
+      <a href="rhythm.html">Rhythm</a>
+      <a href="#">Subscriptions</a>
+      <a href="#">Founder’s story</a>
+    </nav>
+  </div>
+
+  <a href="index.html#waitlist" class="nav-cta">Join waitlist</a>
+</header>
+
+<main>
+
+  <section class="hero">
+    <span class="pill">Rhythm</span>
+
+    <h1>Understand your natural rhythm</h1>
+
+    <p>
+      Rhythm in Aro centres around awareness of your menstrual cycle and how it influences
+      mood, energy, focus, and emotional wellbeing throughout the month.
+    </p>
+
+    <p>
+      By tracking patterns over time, you can begin to recognise recurring shifts and
+      respond with greater self-understanding and compassion.
+    </p>
+  </section>
+
+  <section>
+    <h2>What you can track</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Cycle phases</h3>
+        <p>
+          Log cycle phases and key dates to build awareness of how your body and mind
+          change across the month.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Mood & emotions</h3>
+        <p>
+          Notice emotional patterns and fluctuations, helping you reflect on how
+          hormones may influence how you feel day to day.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Energy & wellbeing</h3>
+        <p>
+          Track energy, rest, and overall wellbeing to better understand when you feel
+          more expansive, reflective, or in need of support.
+        </p>
+      </div>
+    </div>
+
+    <p class="secondary-copy">
+      Rather than predicting or prescribing, Aro supports gentle reflection, helping you
+      build a clearer picture of your rhythm and make choices that feel more aligned over time.
+    </p>
+  </section>
+
+</main>
+
+</body>
+</html>
