@@ -29,7 +29,7 @@
 
     header {
       width: 100%;
-      padding: 24px 48px;
+      padding: 28px 48px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -48,15 +48,16 @@
       opacity: 0.8;
     }
 
+    /* 🔑 NAV LOGO — +300% */
     .nav-logo {
-      height: 30px;
+      height: 90px;
       display: block;
     }
 
     .nav-cta {
       background: var(--accent);
       color: #fff;
-      padding: 10px 18px;
+      padding: 12px 22px;
       border-radius: 999px;
       font-size: 14px;
       text-decoration: none;
@@ -65,14 +66,14 @@
     /* ---------- HERO ---------- */
 
     .hero {
-      min-height: calc(100vh - 96px);
+      min-height: calc(100vh - 120px);
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .hero-content {
-      min-height: 72vh;
+      min-height: 78vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -80,9 +81,9 @@
       text-align: center;
     }
 
-    /* 🔑 HERO LOGO — +70% SCALE */
+    /* 🔑 HERO LOGO — +30% */
     .hero-logo {
-      height: 255px; /* was 150px */
+      height: 432px;
       display: block;
     }
 
@@ -96,7 +97,7 @@
     .hero-cta {
       background: var(--accent);
       color: #fff;
-      padding: 14px 28px;
+      padding: 16px 32px;
       border-radius: 999px;
       font-size: 16px;
       text-decoration: none;
@@ -113,12 +114,16 @@
         display: none;
       }
 
+      .nav-logo {
+        height: 64px; /* scaled down for mobile */
+      }
+
       .hero-content {
-        min-height: 80vh;
+        min-height: 85vh;
       }
 
       .hero-logo {
-        height: 175px; /* proportional mobile scale */
+        height: 300px; /* proportional mobile scale */
       }
 
       .hero-text {
