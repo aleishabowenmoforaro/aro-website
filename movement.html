@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aro. — Cycle-Aware Wellbeing</title>
+  <title>Aro. — Movement</title>
 
-  <!-- DM Serif Display + DM Sans -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -18,6 +18,7 @@
       --text-main: #3f3f3f;
       --text-muted: #6b6b6b;
       --accent: #c75b7a;
+      --pill: #f1e6dc;
     }
 
     * {
@@ -79,40 +80,31 @@
 
     /* ---------- HERO ---------- */
 
-    .hero {
-      min-height: calc(100vh - 160px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .movement-hero {
+      padding: 140px 24px 100px;
       text-align: center;
     }
 
-    .hero-content {
-      min-height: 78vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+    .pill {
+      display: inline-block;
+      background: var(--pill);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 24px;
     }
 
-    .hero-logo {
-      height: 432px;
+    .movement-hero h1 {
+      font-size: 52px;
+      margin-bottom: 32px;
     }
 
-    .hero-text {
-      max-width: 640px;
+    .movement-hero p {
+      max-width: 720px;
+      margin: 0 auto;
       font-size: 20px;
       line-height: 1.6;
       color: var(--text-muted);
-    }
-
-    .hero-cta {
-      background: var(--accent);
-      color: #fff;
-      padding: 16px 32px;
-      border-radius: 999px;
-      font-size: 16px;
-      text-decoration: none;
     }
 
     /* ---------- CONTENT ---------- */
@@ -120,7 +112,6 @@
     section.content {
       background: var(--white);
       padding: 120px 24px;
-      text-align: center;
     }
 
     .content-inner {
@@ -128,50 +119,28 @@
       margin: 0 auto;
     }
 
-    .pillars {
+    .feature-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 48px;
-      margin-top: 72px;
+      gap: 32px;
+      margin-top: 64px;
     }
 
-    .pillar h3 {
-      font-size: 22px;
+    .feature {
+      background: #faf7f4;
+      padding: 32px 28px;
+      border-radius: 20px;
+    }
+
+    .feature h3 {
+      font-size: 20px;
       margin-bottom: 12px;
     }
 
-    .pillar p {
+    .feature p {
       font-size: 16px;
       line-height: 1.5;
       color: var(--text-muted);
-    }
-
-    /* ---------- WAITLIST ---------- */
-
-    .waitlist-form {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .waitlist-form input {
-      padding: 14px 18px;
-      border-radius: 999px;
-      border: 1px solid #ddd;
-      min-width: 260px;
-      font-size: 14px;
-    }
-
-    .waitlist-form button {
-      background: var(--accent);
-      color: #fff;
-      padding: 14px 28px;
-      border-radius: 999px;
-      border: none;
-      font-size: 14px;
-      cursor: pointer;
     }
 
     @media (max-width: 768px) {
@@ -188,11 +157,11 @@
         height: 96px;
       }
 
-      .hero-logo {
-        height: 300px;
+      .movement-hero h1 {
+        font-size: 40px;
       }
 
-      .pillars {
+      .feature-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -215,53 +184,36 @@
     </nav>
   </div>
 
-  <a href="#waitlist" class="nav-cta">Join waitlist</a>
+  <a href="index.html#waitlist" class="nav-cta">Join waitlist</a>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <img src="aro-logo.svg" class="hero-logo" alt="Aro logo" />
-    <p class="hero-text">
-      Finally understand your body. A cycle-aware wellbeing platform connecting movement, fuel, and rhythm.
-    </p>
-    <a href="#waitlist" class="hero-cta">Join the waitlist</a>
-  </div>
+<section class="movement-hero">
+  <div class="pill">Movement</div>
+  <h1>Train with your cycle, not against it</h1>
+  <p>
+    Movement in Aro is built around one simple idea: your training shouldn’t feel the same
+    every day of the month — because your body doesn’t.
+  </p>
 </section>
 
 <section class="content">
   <div class="content-inner">
-    <h2>The Aro approach</h2>
-    <p>
-      Aro brings together your movement, nutrition, and menstrual rhythm into one calm, intuitive platform —
-      helping you train, fuel, and live in sync with your body.
-    </p>
+    <h2>What you can track</h2>
 
-    <div class="pillars">
-      <div class="pillar">
-        <h3>Movement</h3>
-        <p>Train and recover with cycle-aware guidance.</p>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>Strength & workouts</h3>
+        <p>Track gym sessions, sets, reps, and intensity.</p>
       </div>
-      <div class="pillar">
-        <h3>Fuel</h3>
-        <p>Nourish your body in line with energy and hormones.</p>
+      <div class="feature">
+        <h3>Running & cardio</h3>
+        <p>Log pace, distance, effort, and recovery.</p>
       </div>
-      <div class="pillar">
-        <h3>Rhythm</h3>
-        <p>Understand patterns in mood, focus, and wellbeing.</p>
+      <div class="feature">
+        <h3>Recovery & rest</h3>
+        <p>Balance training with mobility and rest days.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="content" id="waitlist">
-  <div class="content-inner">
-    <h2>Join the waitlist</h2>
-    <p>Be the first to access Aro when we enter beta.</p>
-
-    <form class="waitlist-form">
-      <input type="email" placeholder="Your email address" required />
-      <button type="submit">Join waitlist</button>
-    </form>
   </div>
 </section>
 
