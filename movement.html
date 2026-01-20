@@ -6,7 +6,6 @@
   <title>Aro. — Movement</title>
 
   <style>
-    /* --- EXACT SAME DESIGN TOKENS AS index.html --- */
     :root {
       --bg-start: #f6efe8;
       --bg-end: #f3f0e9;
@@ -14,6 +13,7 @@
       --text-main: #3f3f3f;
       --text-muted: #6b6b6b;
       --accent: #c75b7a;
+      --soft-pill: #f1e6dc;
     }
 
     * {
@@ -28,7 +28,7 @@
       background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
     }
 
-    /* ---------- HEADER (UNCHANGED) ---------- */
+    /* ---------- HEADER (IDENTICAL TO INDEX) ---------- */
 
     header {
       width: 100%;
@@ -69,33 +69,87 @@
       white-space: nowrap;
     }
 
-    /* ---------- PAGE CONTENT ---------- */
+    /* ---------- HERO / EDITORIAL INTRO ---------- */
 
-    .page {
-      min-height: calc(100vh - 160px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .movement-hero {
+      padding: 140px 24px 100px;
       text-align: center;
-      padding: 120px 24px;
     }
 
-    .page-inner {
-      max-width: 720px;
-    }
-
-    .page-inner h1 {
-      font-size: 36px; /* matches section headers on homepage */
+    .pill {
+      display: inline-block;
+      background: var(--soft-pill);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
       margin-bottom: 24px;
     }
 
-    .page-inner p {
-      font-size: 18px;
+    .movement-hero h1 {
+      font-size: 52px;
+      margin-bottom: 32px;
+    }
+
+    .movement-hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 20px;
       line-height: 1.6;
       color: var(--text-muted);
     }
 
-    /* ---------- RESPONSIVE (UNCHANGED PATTERN) ---------- */
+    /* ---------- CONTENT SECTIONS ---------- */
+
+    section.content {
+      background: var(--white);
+      padding: 120px 24px;
+    }
+
+    .content-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .content h2 {
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin-bottom: 24px;
+    }
+
+    /* ---------- FEATURE GRID ---------- */
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 64px;
+    }
+
+    .feature {
+      background: #faf7f4;
+      border-radius: 20px;
+      padding: 32px 28px;
+    }
+
+    .feature h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .feature p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
 
     @media (max-width: 768px) {
       header {
@@ -110,40 +164,20 @@
       .nav-logo {
         height: 96px;
       }
+
+      .movement-hero h1 {
+        font-size: 40px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER (IDENTICAL TO index.html) -->
+  <!-- HEADER -->
   <header>
-    <img src="aroswirl.svg" alt="Aro swirl" class="nav-logo" />
-
-    <div class="nav-center">
-      <nav>
-        <a href="index.html">Product</a>
-        <a href="movement.html">Movement</a>
-        <a href="fuel.html">Fuel</a>
-        <a href="rhythm.html">Rhythm</a>
-        <a href="#">Subscriptions</a>
-        <a href="#">Founder’s story</a>
-      </nav>
-    </div>
-
-    <a href="index.html#waitlist" class="nav-cta">Join waitlist</a>
-  </header>
-
-  <!-- CONTENT -->
-  <section class="page">
-    <div class="page-inner">
-      <h1>Movement</h1>
-      <p>
-        Log workouts, runs, recovery, and training sessions — with guidance that adapts to your menstrual cycle,
-        energy levels, and recovery needs.
-      </p>
-    </div>
-  </section>
-
-</body>
-</html>
+    <img src="aroswirl.svg" alt="Aro swirl
