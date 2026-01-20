@@ -48,9 +48,9 @@
       opacity: 0.8;
     }
 
-    /* 🔑 NAV LOGO — SWIRL ONLY */
+    /* 🔑 NAV LOGO — SWIRL ONLY (DOUBLED) */
     .nav-logo {
-      height: 64px; /* tuned for symbol, not wordmark */
+      height: 128px; /* was 64px */
       display: block;
     }
 
@@ -66,7 +66,7 @@
     /* ---------- HERO ---------- */
 
     .hero {
-      min-height: calc(100vh - 120px);
+      min-height: calc(100vh - 160px); /* accounts for larger nav */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -115,7 +115,11 @@
       }
 
       .nav-logo {
-        height: 48px; /* mobile-friendly */
+        height: 96px; /* proportional mobile size */
+      }
+
+      .hero {
+        min-height: calc(100vh - 120px);
       }
 
       .hero-content {
