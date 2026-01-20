@@ -1,1 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuel — Aro</title>
+
+  <!-- DM Serif Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-start: #f6efe8;
+      --bg-end: #f3f0e9;
+      --text-main: #3f3f3f;
+      --text-muted: #6b6b6b;
+      --pill-bg: #e6edda;
+      --accent: #c75b7a;
+      --fuel-accent: #9fb26b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--text-main);
+      background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
+    }
+
+    h1, h2, h3 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+    }
+
+    /* ---------- NAV (IDENTICAL ACROSS SITE) ---------- */
+
+    header {
+      width: 100%;
+      padding: 28px 48px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+    }
+
+    .nav-logo {
+      height: 128px;
+    }
+
+    .nav-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      opacity: 0.85;
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    /* ---------- PAGE CONTENT ---------- */
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 32px 140px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin-bottom: 16px;
+    }
+
+    section {
+      margin-top: 72px;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+
+    /* ---------- CARDS ---------- */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: rgba(159, 178, 107, 0.16);
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .secondary-copy {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 720px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 24px;
+        grid-template-columns: auto auto;
+      }
+
+      .nav-center {
+        display: none;
+      }
+
+      .nav-logo {
+        height: 96px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="aroswirl.svg" class="nav-logo" alt="Aro swirl" />
+
+  <div class="nav-center">
+    <nav>
+      <a href="index.html">Product</a>
+      <a href="movement.html">Movement</a>
+      <a href="fuel.html">Fuel</a>
+      <a href="rhythm.html">Rhythm</a>
+      <a href="#">Subscriptions</a>
+      <a href="#">Founder’s story</a>
+    </nav>
+  </div>
+
+  <a href="index.html#waitlist" class="nav-cta">Join waitlist</a>
+</header>
+
+<main>
+
+  <section class="hero">
+    <span class="pill">Fuel</span>
+
+    <h1>Fuel in tune with your body</h1>
+
+    <p>
+      Fuel in Aro is about building awareness of how your body responds to food across
+      different phases of your cycle, not following strict rules or perfect plans.
+    </p>
+
+    <p>
+      By noticing patterns in appetite, energy, digestion, and cravings, you can begin
+      to make more informed, supportive choices that feel aligned with your body.
+    </p>
+  </section>
+
+  <section>
+    <h2>What you can track</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Meals & nourishment</h3>
+        <p>
+          Log meals and snacks in a flexible way, focusing on how food supports your energy,
+          satisfaction, and wellbeing.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Hunger & energy cues</h3>
+        <p>
+          Notice how hunger, fullness, and energy levels shift throughout your cycle and
+          across different days.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Patterns & reflections</h3>
+        <p>
+          Reflect on how different foods make you feel over time, helping you recognise
+          patterns without judgment or pressure.
+        </p>
+      </div>
+    </div>
+
+    <p class="secondary-copy">
+      Rather than telling you what to eat, Aro supports you in tuning into your body’s signals,
+      encouraging curiosity, consistency, and trust in your own experience.
+    </p>
+  </section>
+
+</main>
+
+</body>
+</html>
 
